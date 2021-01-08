@@ -19,10 +19,11 @@ struct VolumeInfo: Decodable {
     
     let title: String
     let authors: [String]?
-    let publisher: String
-    let publishedDate: String
-    let description: String
+    let publisher: String?
+    let publishedDate: String?
+    let description: String?
     let previewLink: String
+    let imageLinks: ImageLinks?
     
 }
 
@@ -38,4 +39,9 @@ struct ListPrice: Decodable {
     let amount: Double
     let currencyCode: String
     
+}
+
+struct ImageLinks: Decodable {
+    let smallThumbnail: String
+    let thumbnail: String
 }

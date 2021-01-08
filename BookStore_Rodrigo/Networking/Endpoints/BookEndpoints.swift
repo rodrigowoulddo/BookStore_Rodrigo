@@ -41,7 +41,7 @@ enum BookEndpoints: TargetType {
                 let parameters = [
                     "q": BookEndpoints.DEFAULT_QUERY,
                     "maxResults": "\(BookEndpoints.DEFAULT_MAX_RESULTS)",
-                    "startIndex": "\(page * BookEndpoints.DEFAULT_MAX_RESULTS)"
+                    "startIndex": "\((page * BookEndpoints.DEFAULT_MAX_RESULTS) + 1)"
                 ]
                 
                 return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)

@@ -10,6 +10,5 @@ import Foundation
 struct BookResponse: Decodable {
     
     let totalItems: Int
-    let items: [Book]
-    
+    let items: [Book]?
 }

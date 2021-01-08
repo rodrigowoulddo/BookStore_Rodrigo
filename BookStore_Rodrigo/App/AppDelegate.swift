@@ -15,23 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        // API Call example
-        let service = Service<BookEndpoints>()
-        
-        service.request(.getVolumes(page: 0)){
-            (result: Result<BookResponse,Error>) in
-
-            switch result {
-            
-            case .success(let response):
-                print(response.items)
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
         return true
     }
 
