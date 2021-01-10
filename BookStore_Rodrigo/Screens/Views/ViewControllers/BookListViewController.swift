@@ -17,7 +17,6 @@ class BookListCollectionViewController: UICollectionViewController {
     
     // MARK: - Atributes
     var viewModel = BookListViewModel()
-    var selecTedBook: Book?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -31,8 +30,12 @@ class BookListCollectionViewController: UICollectionViewController {
         
         if segue.identifier == bookDetailsSegueIdentifier {
             
-            guard let bookDetailVC = segue.destination as? BookDetailsViewController else { return }
-            bookDetailVC.book = selecTedBook
+            guard
+                let bookDetailVC = segue.destination as? BookDetailsViewController,
+                let selectedBook = viewModel.selectedBook
+            else { return }
+            
+            bookDetailVC.viewModel = BookDetailsViewModel(book: selectedBook)
         }
     }
 }
@@ -75,7 +78,7 @@ extension BookListCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        selecTedBook = viewModel.getBook(for: indexPath)
+        viewModel.selectBook(at: indexPath)
         performSegue(withIdentifier: bookDetailsSegueIdentifier, sender: nil)
     }
     

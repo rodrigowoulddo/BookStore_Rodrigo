@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		557BD34DAA93CB862945B785 /* Pods_BookStore_Rodrigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257074BD597014BA28758814 /* Pods_BookStore_Rodrigo.framework */; };
+		751BE85225ABB67800785397 /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BE85125ABB67800785397 /* BookDetailsViewModel.swift */; };
 		75AD4C9B25AAAFB10038C5CB /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD4C9A25AAAFB10038C5CB /* BookDetailsViewController.swift */; };
 		75B654C425A8DC55004065BF /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B654C325A8DC55004065BF /* BookListViewModel.swift */; };
 		75B654C725A8FC14004065BF /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B654C625A8FC14004065BF /* BookCollectionViewCell.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		257074BD597014BA28758814 /* Pods_BookStore_Rodrigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStore_Rodrigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		751BE85125ABB67800785397 /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		75AD4C9A25AAAFB10038C5CB /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		75B654C325A8DC55004065BF /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		75B654C625A8FC14004065BF /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -180,9 +182,9 @@
 		75D6D59025A8C79500F4A84B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75D6D59225A8C7B800F4A84B /* Storyboards */,
 				75AD4C9E25AAAFC90038C5CB /* ViewControllers */,
 				75AD4C9D25AAAFB80038C5CB /* CollectionViewCells */,
-				75D6D59225A8C7B800F4A84B /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				75B654C325A8DC55004065BF /* BookListViewModel.swift */,
+				751BE85125ABB67800785397 /* BookDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				75B654C725A8FC14004065BF /* BookCollectionViewCell.swift in Sources */,
 				75D6D5CD25A8CDBB00F4A84B /* BookModels.swift in Sources */,
 				75D6D5B225A8C9AF00F4A84B /* TargeType+default.swift in Sources */,
+				751BE85225ABB67800785397 /* BookDetailsViewModel.swift in Sources */,
 				75D6D5B425A8C9AF00F4A84B /* DateFormatter+Extensions.swift in Sources */,
 				75D6D5D125A8CE4900F4A84B /* BookEndpoints.swift in Sources */,
 				75B654CF25A8FD19004065BF /* UIImage+Extensions.swift in Sources */,

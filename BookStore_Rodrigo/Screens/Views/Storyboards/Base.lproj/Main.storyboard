@@ -106,19 +106,19 @@
         <!--Details-->
         <scene sceneID="92H-PN-cWj">
             <objects>
-                <viewController id="tJP-2e-yMU" sceneMemberID="viewController">
+                <viewController id="tJP-2e-yMU" customClass="BookDetailsViewController" customModule="BookStore_Rodrigo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fUE-4H-jDk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU0-2o-7Jr">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXp-vl-11k">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="940.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WHG-ia-diV">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="569.5"/>
+                                                <rect key="frame" x="20" y="0.0" width="374" height="920.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-Nk-oXC">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
@@ -199,7 +199,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sJL-Vm-HRB">
-                                                        <rect key="frame" x="0.0" y="320" width="374" height="249.5"/>
+                                                        <rect key="frame" x="0.0" y="320" width="374" height="600.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik2-Lg-dGM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="16"/>
@@ -208,20 +208,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="471-y6-Rrs">
-                                                                <rect key="frame" x="0.0" y="16" width="374" height="183.5"/>
+                                                                <rect key="frame" x="0.0" y="16" width="374" height="584.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</mutableString>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-z2-MNu">
-                                                                <rect key="frame" x="0.0" y="199.5" width="374" height="50"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="50" id="ee7-ek-Afw"/>
-                                                                </constraints>
-                                                            </view>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -231,6 +224,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="WHG-ia-diV" secondAttribute="trailing" constant="20" id="DSd-t6-lDR"/>
                                             <constraint firstItem="WHG-ia-diV" firstAttribute="leading" secondItem="lXp-vl-11k" secondAttribute="leading" constant="20" id="G1E-aj-yfd"/>
+                                            <constraint firstAttribute="bottom" secondItem="WHG-ia-diV" secondAttribute="bottom" constant="20" id="eXw-qJ-oeG"/>
                                             <constraint firstItem="WHG-ia-diV" firstAttribute="top" secondItem="lXp-vl-11k" secondAttribute="top" id="k6j-A2-4ge"/>
                                         </constraints>
                                     </view>
@@ -243,18 +237,27 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="x4A-pd-V1w"/>
+                        <viewLayoutGuide key="safeArea" id="7Bo-5j-3qs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DU0-2o-7Jr" firstAttribute="top" secondItem="x4A-pd-V1w" secondAttribute="top" id="0xj-TQ-A2R"/>
-                            <constraint firstItem="DU0-2o-7Jr" firstAttribute="leading" secondItem="x4A-pd-V1w" secondAttribute="leading" id="2AM-Ds-nAJ"/>
+                            <constraint firstItem="DU0-2o-7Jr" firstAttribute="top" secondItem="fUE-4H-jDk" secondAttribute="top" id="0xj-TQ-A2R"/>
+                            <constraint firstItem="DU0-2o-7Jr" firstAttribute="leading" secondItem="fUE-4H-jDk" secondAttribute="leading" id="2AM-Ds-nAJ"/>
                             <constraint firstItem="lXp-vl-11k" firstAttribute="width" secondItem="fUE-4H-jDk" secondAttribute="width" id="FSa-lO-MYh"/>
-                            <constraint firstItem="x4A-pd-V1w" firstAttribute="trailing" secondItem="DU0-2o-7Jr" secondAttribute="trailing" id="Jcr-et-MEI"/>
+                            <constraint firstAttribute="trailing" secondItem="DU0-2o-7Jr" secondAttribute="trailing" id="Jcr-et-MEI"/>
                             <constraint firstItem="lXp-vl-11k" firstAttribute="height" secondItem="fUE-4H-jDk" secondAttribute="height" priority="250" id="eBc-A9-Hf8"/>
-                            <constraint firstItem="x4A-pd-V1w" firstAttribute="bottom" secondItem="DU0-2o-7Jr" secondAttribute="bottom" id="eeG-g0-jgj"/>
+                            <constraint firstAttribute="bottom" secondItem="DU0-2o-7Jr" secondAttribute="bottom" id="eeG-g0-jgj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="ZhF-gm-ydB"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="fse-cU-nQZ" id="T4l-Nz-5fF"/>
+                        <outlet property="buyButton" destination="pxm-6O-Gar" id="LTq-9G-Im5"/>
+                        <outlet property="coverImageView" destination="7Pp-1N-LrO" id="9iJ-x8-X1F"/>
+                        <outlet property="descriptionTextView" destination="471-y6-Rrs" id="RBD-Kp-qBp"/>
+                        <outlet property="previewButton" destination="z05-bF-xE7" id="vvs-sI-9jI"/>
+                        <outlet property="publishedDateLabel" destination="oCO-oa-M4F" id="rsg-Hq-89V"/>
+                        <outlet property="titleLabel" destination="nmx-8S-pH7" id="9AB-ia-9ig"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Pm-Wy-O3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,6 +19,7 @@ class BookListViewModel {
     let service = Service<BookEndpoints>()
     
     var allBooks: [Book] = []
+    var selectedBook: Book? = nil
     var currentPage = 0
     
     // MARK: - Public Methods
@@ -47,6 +48,10 @@ class BookListViewModel {
     
     public func getBook(for indexPath: IndexPath) -> Book {
         return allBooks[indexPath.row]
+    }
+    
+    public func selectBook(at indexPath: IndexPath) {
+        self.selectedBook = getBook(for: indexPath)
     }
     
     public func shouldLoadNextPage(whenDisplaying indexPath: IndexPath) -> Bool {
