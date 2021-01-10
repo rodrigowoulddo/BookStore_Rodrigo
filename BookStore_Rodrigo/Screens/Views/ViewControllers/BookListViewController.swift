@@ -10,18 +10,30 @@ import UIKit
 class BookListCollectionViewController: UICollectionViewController {
     
     // MARK: - Constants
-    private let reuseIdentifiers = "BookCell"
+    private let bookDetailsSegueIdentifier = "BookDetails"
+    private let bookCellIdentifier = "BookCell"
     private let sectionInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
     private let itemsPerRow: CGFloat = 2
     
     // MARK: - Atributes
     var viewModel = BookListViewModel()
+    var selecTedBook: Book?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchBooks()
         viewModel.delegate = self
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == bookDetailsSegueIdentifier {
+            
+            guard let bookDetailVC = segue.destination as? BookDetailsViewController else { return }
+            bookDetailVC.book = selecTedBook
+        }
     }
 }
 // MARK: - BookListViewModelDelegate
@@ -51,7 +63,7 @@ extension BookListCollectionViewController {
                 
         let book = viewModel.getBook(for: indexPath)
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifiers, for: indexPath) as? BookCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bookCellIdentifier, for: indexPath) as? BookCollectionViewCell {
             
             cell.configure(with: book)
             return cell
@@ -59,6 +71,12 @@ extension BookListCollectionViewController {
         } else {
             return UICollectionViewCell()
         }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        selecTedBook = viewModel.getBook(for: indexPath)
+        performSegue(withIdentifier: bookDetailsSegueIdentifier, sender: nil)
     }
     
     /// The pagination happens here.
