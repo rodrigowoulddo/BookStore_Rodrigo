@@ -17,6 +17,7 @@ class BookDetailsViewController: UIViewController {
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var favoriteBarButtonItem: UIBarButtonItem!
     
     // MARK: - Atributes
     var viewModel: BookDetailsViewModel!
@@ -28,14 +29,33 @@ class BookDetailsViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
+    // MARK: - Outlet Functions
+    @IBAction func favoriteButtonAction(_ sender: Any) {
+        viewModel.handleFavoriteAction()
+    }
+    
+    @IBAction func previewButtonAction(_ sender: Any) {
+        if let url = URL(string: viewModel.book.volumeInfo.previewLink) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func buyButtonAction(_ sender: Any) {
+        
+        if let buyURL = viewModel.book.saleInfo.buyLink,
+           let url = URL(string: buyURL) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     // MARK: - Private Methods
     private func configure() {
         
         configureCoverImage()
         configureBasicInformation()
-        configurePreview()
         configureBuying()
         configureDescription()
+        configureFavorite()
     }
     
     private func configureCoverImage() {
@@ -52,15 +72,17 @@ class BookDetailsViewController: UIViewController {
         publishedDateLabel.text = viewModel.book.volumeInfo.publishedDate
     }
     
-    private func configurePreview() {
-        
-    }
-    
     private func configureBuying() {
-        
+        buyButton.backgroundColor = viewModel.buyingEnabled ? .systemGreen : .systemGray
+        buyButton.isEnabled = viewModel.buyingEnabled
+        buyButton.setTitle(viewModel.buyButtonText, for: .normal)
     }
     
     private func configureDescription() {
         descriptionTextView.text = viewModel.book.volumeInfo.description
+    }
+    
+    private func configureFavorite() {
+        favoriteBarButtonItem.image = viewModel.isBookFavorite ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
     }
 }

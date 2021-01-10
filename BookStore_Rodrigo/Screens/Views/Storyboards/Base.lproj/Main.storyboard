@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -187,6 +188,14 @@
                                                                 <state key="normal" title="Preview">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="previewButtonAction:" destination="tJP-2e-yMU" eventType="touchUpInside" id="Izd-VF-h4G"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxm-6O-Gar">
                                                                 <rect key="frame" x="197" y="0.0" width="177" height="30"/>
@@ -195,6 +204,14 @@
                                                                 <state key="normal" title="Buy for R$ 9,99">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="buyButtonAction:" destination="tJP-2e-yMU" eventType="touchUpInside" id="LQO-vA-wKL"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -248,12 +265,20 @@
                             <constraint firstAttribute="bottom" secondItem="DU0-2o-7Jr" secondAttribute="bottom" id="eeG-g0-jgj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="ZhF-gm-ydB"/>
+                    <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="ZhF-gm-ydB">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="cOd-aZ-VyU">
+                            <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <action selector="favoriteButtonAction:" destination="tJP-2e-yMU" id="mwY-SG-0lH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="authorLabel" destination="fse-cU-nQZ" id="T4l-Nz-5fF"/>
                         <outlet property="buyButton" destination="pxm-6O-Gar" id="LTq-9G-Im5"/>
                         <outlet property="coverImageView" destination="7Pp-1N-LrO" id="9iJ-x8-X1F"/>
                         <outlet property="descriptionTextView" destination="471-y6-Rrs" id="RBD-Kp-qBp"/>
+                        <outlet property="favoriteBarButtonItem" destination="cOd-aZ-VyU" id="pdz-9D-WBM"/>
                         <outlet property="previewButton" destination="z05-bF-xE7" id="vvs-sI-9jI"/>
                         <outlet property="publishedDateLabel" destination="oCO-oa-M4F" id="rsg-Hq-89V"/>
                         <outlet property="titleLabel" destination="nmx-8S-pH7" id="9AB-ia-9ig"/>
@@ -283,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

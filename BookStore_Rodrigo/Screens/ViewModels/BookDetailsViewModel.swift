@@ -19,13 +19,34 @@ class BookDetailsViewModel {
     weak var delegate: BookDetailsViewModelDelegate?
     var book: Book
     
+    // MARK: - Init
+    init(book: Book) {
+        self.book = book
+    }
+    
     // MARK: - Computed Variables
     var formattedAuthors: String? {
         return book.volumeInfo.authors?.joined(separator: "; ")
     }
     
-    // MARK: - Init
-    init(book: Book) {
-        self.book = book
+    var isBookFavorite: Bool {
+        return true
+    }
+    
+    var buyButtonText: String {
+        if let listPrice = book.saleInfo.listPrice {
+            return "\(listPrice.currencyCode) \(listPrice.amount)"
+        } else {
+            return "Out of stock"
+        }
+    }
+    
+    var buyingEnabled: Bool {
+        return book.saleInfo.buyLink != nil
+    }
+    
+    // MARK: - Public Functions
+    func handleFavoriteAction() {
+        // TODO
     }
 }
