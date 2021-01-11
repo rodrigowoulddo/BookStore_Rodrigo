@@ -25,8 +25,8 @@ class BookDetailsViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         configure()
-        view.layoutIfNeeded()
     }
     
     // MARK: - Outlet Functions
@@ -84,5 +84,11 @@ class BookDetailsViewController: UIViewController {
     
     private func configureFavorite() {
         favoriteBarButtonItem.image = viewModel.isBookFavorite ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+    }
+}
+
+extension BookDetailsViewController: BookDetailsViewModelDelegate {
+    func didHandleFavorite() {
+        configureFavorite()
     }
 }

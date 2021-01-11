@@ -9,8 +9,7 @@ import Foundation
 
 protocol BookDetailsViewModelDelegate: class {
     
-    /// Define interections here
-    
+    func didHandleFavorite()
 }
 
 class BookDetailsViewModel {
@@ -30,7 +29,7 @@ class BookDetailsViewModel {
     }
     
     var isBookFavorite: Bool {
-        return true
+        return UserDefaultsAccess.getFavoriteBookIds().contains(book.id)
     }
     
     var buyButtonText: String {
@@ -47,6 +46,11 @@ class BookDetailsViewModel {
     
     // MARK: - Public Functions
     func handleFavoriteAction() {
-        // TODO
+        
+        isBookFavorite ?
+            UserDefaultsAccess.deleteFavoriteBook(withID: book.id) :
+            UserDefaultsAccess.saveFavoriteBook(withID: book.id)
+        
+        delegate?.didHandleFavorite()
     }
 }
