@@ -56,7 +56,7 @@ Este exemplo de app foi desenvolvido como teste para a vaga de desenvolvedor iOS
 O app consiste em uma loja de livros que utiliza a [API do Google Books](https://developers.google.com/books). O app foi desenvolvido utilizando [Swift](https://developer.apple.com/swift/) e o [Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html#//apple_ref/doc/uid/TP40010215-CH42-SW1) do XCode. O app respeita os padrões da [Arquitetura MVVM](https://www.raywenderlich.com/34-design-patterns-by-tutorials-mvvm).
 
 ## Configuração
-Primeiramente, clone o repositório.
+Primeiramente, clone o repositório
 
 ```
 git clone https://github.com/rodrigowoulddo/BookStore_Rodrigo
