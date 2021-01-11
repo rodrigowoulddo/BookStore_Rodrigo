@@ -12,7 +12,7 @@ class BookListCollectionViewController: UICollectionViewController {
     // MARK: - Constants
     private let bookDetailsSegueIdentifier = "BookDetails"
     private let bookCellIdentifier = "BookCell"
-    private let sectionInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
+    private let sectionInsets = UIEdgeInsets(top: 50, left: 10, bottom: 40, right: 10)
     private let itemsPerRow: CGFloat = 2
     
     // MARK: - Atributes
