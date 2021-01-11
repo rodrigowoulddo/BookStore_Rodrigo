@@ -18,7 +18,7 @@ The app consists of a book shop that lists books using the [Google Books API](ht
 <img src="./Screenshots/favorites-list.png" width="260" />
 
 ## Setup
-First of all, clone this repo.
+First of all, clone this repo
 
 ```
 git clone https://github.com/rodrigowoulddo/BookStore_Rodrigo
