@@ -1,5 +1,12 @@
 # Book Store App
 
+![](https://badgen.net/badge/iOS/13/blue) ![](https://badgen.net/badge/Swift/5/orange)
+
+- **Application language:** English
+- **Code language:** English
+
+___
+
 **Portuguese version below 🇧🇷🇵🇹**
 
 ## About
