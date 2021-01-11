@@ -10,6 +10,24 @@ The app consists of a book shop that lists books using the [Google Books API](ht
 <img src="./Screenshots/book-list.png" width="260" /><img src="./Screenshots/book-detail.png" width="260" />
 <img src="./Screenshots/favorites-list.png" width="260" />
 
+## Setup
+First of all, clone this repo.
+
+```
+git clone https://github.com/rodrigowoulddo/BookStore_Rodrigo
+cd BookStore_Rodrigo
+```
+
+Then, install pods (using [CocoaPods](https://cocoapods.org/))
+```
+pod install
+```
+
+And finally, open the project and launch it on any device or simulator
+```
+xed .
+```
+
 ## Main Features
 - List of iOS Books using UICollectionView
 - Details screen with book information
@@ -37,6 +55,23 @@ Este exemplo de app foi desenvolvido como teste para a vaga de desenvolvedor iOS
 
 O app consiste em uma loja de livros que utiliza a [API do Google Books](https://developers.google.com/books). O app foi desenvolvido utilizando [Swift](https://developer.apple.com/swift/) e o [Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html#//apple_ref/doc/uid/TP40010215-CH42-SW1) do XCode. O app respeita os padrões da [Arquitetura MVVM](https://www.raywenderlich.com/34-design-patterns-by-tutorials-mvvm).
 
+## Configuração
+Primeiramente, clone o repositório.
+
+```
+git clone https://github.com/rodrigowoulddo/BookStore_Rodrigo
+cd BookStore_Rodrigo
+```
+
+Depois, instale os pods (utilizando [CocoaPods](https://cocoapods.org/))
+```
+pod install
+```
+
+E finalmente, abra o projeto e execute em qualquer aparelho ou simulador
+```
+xed .
+```
 ## Principais Features
 - Lista de Livros sobre iOS usando UICollectionView
 - Página de detalhes com informações do livro
