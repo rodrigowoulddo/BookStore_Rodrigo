@@ -79,7 +79,7 @@ xed .
 - Favoritar / Desfavoritar livro
 - Lista de livros favoritados
 
-## Features secundárias
+## Features Secundárias
 - Disponibilidade para iPad
 - Scroll infinito, carregando mais livros
 - Acesso à URLs utilizando o Safari
