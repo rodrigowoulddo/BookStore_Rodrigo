@@ -11,6 +11,8 @@
 		751BE85225ABB67800785397 /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BE85125ABB67800785397 /* BookDetailsViewModel.swift */; };
 		751BE85625ABCA1D00785397 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BE85525ABCA1D00785397 /* UIView+Extensions.swift */; };
 		751BE85925ABEC8C00785397 /* UserDefaultsAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BE85825ABEC8C00785397 /* UserDefaultsAccess.swift */; };
+		751BE86225AC9BBB00785397 /* FavoriteBooksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BE86125AC9BBB00785397 /* FavoriteBooksListViewModel.swift */; };
+		758DB20A25AC9FFE00068E68 /* FavoriteBooksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DB20925AC9FFE00068E68 /* FavoriteBooksListViewController.swift */; };
 		75AD4C9B25AAAFB10038C5CB /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD4C9A25AAAFB10038C5CB /* BookDetailsViewController.swift */; };
 		75B654C425A8DC55004065BF /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B654C325A8DC55004065BF /* BookListViewModel.swift */; };
 		75B654C725A8FC14004065BF /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B654C625A8FC14004065BF /* BookCollectionViewCell.swift */; };
@@ -41,6 +43,8 @@
 		751BE85125ABB67800785397 /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		751BE85525ABCA1D00785397 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		751BE85825ABEC8C00785397 /* UserDefaultsAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsAccess.swift; sourceTree = "<group>"; };
+		751BE86125AC9BBB00785397 /* FavoriteBooksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksListViewModel.swift; sourceTree = "<group>"; };
+		758DB20925AC9FFE00068E68 /* FavoriteBooksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksListViewController.swift; sourceTree = "<group>"; };
 		75AD4C9A25AAAFB10038C5CB /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		75B654C325A8DC55004065BF /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		75B654C625A8FC14004065BF /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			children = (
 				75D6D57925A8C63200F4A84B /* BookListViewController.swift */,
 				75AD4C9A25AAAFB10038C5CB /* BookDetailsViewController.swift */,
+				758DB20925AC9FFE00068E68 /* FavoriteBooksListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			children = (
 				75B654C325A8DC55004065BF /* BookListViewModel.swift */,
 				751BE85125ABB67800785397 /* BookDetailsViewModel.swift */,
+				751BE86125AC9BBB00785397 /* FavoriteBooksListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -413,6 +419,8 @@
 				75D6D5B425A8C9AF00F4A84B /* DateFormatter+Extensions.swift in Sources */,
 				751BE85925ABEC8C00785397 /* UserDefaultsAccess.swift in Sources */,
 				75D6D5D125A8CE4900F4A84B /* BookEndpoints.swift in Sources */,
+				758DB20A25AC9FFE00068E68 /* FavoriteBooksListViewController.swift in Sources */,
+				751BE86225AC9BBB00785397 /* FavoriteBooksListViewModel.swift in Sources */,
 				75B654CF25A8FD19004065BF /* UIImage+Extensions.swift in Sources */,
 				75D6D5B325A8C9AF00F4A84B /* Result+decoded.swift in Sources */,
 				75B654C425A8DC55004065BF /* BookListViewModel.swift in Sources */,

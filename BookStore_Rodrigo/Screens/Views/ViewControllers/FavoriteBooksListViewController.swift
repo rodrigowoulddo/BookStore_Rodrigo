@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  FsvoriteBooksListViewController.swift
 //  BookStore_Rodrigo
 //
-//  Created by Rodrigo Giglio on 08/01/21.
+//  Created by Rodrigo Giglio on 11/01/21.
 //
 
 import UIKit
 
-class BookListCollectionViewController: UICollectionViewController {
+class FavoriteBooksListViewController: UICollectionViewController {
     
     // MARK: - Constants
     private let bookDetailsSegueIdentifier = "BookDetails"
@@ -16,13 +16,17 @@ class BookListCollectionViewController: UICollectionViewController {
     private let itemsPerRow: CGFloat = 2
     
     // MARK: - Atributes
-    var viewModel = BookListViewModel()
+    var viewModel = FavoriteBooksListViewModel()
  
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchBooks()
         viewModel.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewModel.fetchBooks()
     }
     
     // MARK: - Navigation
@@ -40,26 +44,22 @@ class BookListCollectionViewController: UICollectionViewController {
     }
 }
 // MARK: - BookListViewModelDelegate
-extension BookListCollectionViewController: BookListViewModelDelegate {
+extension FavoriteBooksListViewController: FavoriteBooksListViewModelDelegate {
     
     func didLoadBooks() {
         collectionView.reloadData()
     }
-    
-    func didFetchError() {
-        showDefaultErrorAlert()
-    }
 }
 
 // MARK: - UICollectionViewDataSource
-extension BookListCollectionViewController {
+extension FavoriteBooksListViewController {
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.allBooks.count
+        return viewModel.favoriteBooks.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,18 +81,10 @@ extension BookListCollectionViewController {
         viewModel.selectBook(at: indexPath)
         performSegue(withIdentifier: bookDetailsSegueIdentifier, sender: nil)
     }
-    
-    /// The pagination happens here.
-    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        if viewModel.shouldLoadNextPage(whenDisplaying: indexPath) {
-            viewModel.fetchBooks()
-        }
-    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension BookListCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension FavoriteBooksListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

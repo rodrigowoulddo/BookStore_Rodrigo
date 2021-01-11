@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book: Decodable {
+struct Book: Codable {
     
     let id: String
     let volumeInfo: VolumeInfo
@@ -15,7 +15,7 @@ struct Book: Decodable {
     
 }
 
-struct VolumeInfo: Decodable {
+struct VolumeInfo: Codable {
     
     let title: String
     let authors: [String]?
@@ -27,21 +27,21 @@ struct VolumeInfo: Decodable {
     
 }
 
-struct SaleInfo: Decodable {
+struct SaleInfo: Codable {
     
     let listPrice: ListPrice?
     let buyLink: String?
     
 }
 
-struct ListPrice: Decodable {
+struct ListPrice: Codable {
     
     let amount: Double
     let currencyCode: String
     
 }
 
-struct ImageLinks: Decodable {
+struct ImageLinks: Codable {
     let smallThumbnail: String
     let thumbnail: String
 }

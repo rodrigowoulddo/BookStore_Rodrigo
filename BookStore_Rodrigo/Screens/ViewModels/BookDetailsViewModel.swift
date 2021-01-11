@@ -29,7 +29,7 @@ class BookDetailsViewModel {
     }
     
     var isBookFavorite: Bool {
-        return UserDefaultsAccess.getFavoriteBookIds().contains(book.id)
+        return UserDefaultsAccess.getFavoriteBooks().contains(where: { $0.id == book.id })
     }
     
     var buyButtonText: String {
@@ -49,7 +49,7 @@ class BookDetailsViewModel {
         
         isBookFavorite ?
             UserDefaultsAccess.deleteFavoriteBook(withID: book.id) :
-            UserDefaultsAccess.saveFavoriteBook(withID: book.id)
+            UserDefaultsAccess.saveFavoriteBook(book)
         
         delegate?.didHandleFavorite()
     }
