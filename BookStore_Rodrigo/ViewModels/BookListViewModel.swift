@@ -22,6 +22,9 @@ class BookListViewModel {
     var selectedBook: Book? = nil
     var currentPage = 0
     
+    // MARK: - Computed Variables
+    var bookCount: Int { return allBooks.count }
+    
     // MARK: - Public Methods
     public func fetchBooks() {
         

@@ -17,9 +17,11 @@ class FavoriteBooksListViewModel {
     weak var delegate: FavoriteBooksListViewModelDelegate?
     let service = Service<BookEndpoints>()
     
-    // MARK: - Computed Variables
     var favoriteBooks: [Book] = []
     var selectedBook: Book? = nil
+    
+    // MARK: - Computed Variables
+    var bookCount: Int { return favoriteBooks.count }
     
     // MARK: - Public Methods
     public func fetchBooks() {

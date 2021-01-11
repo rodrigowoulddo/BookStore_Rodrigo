@@ -94,6 +94,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		751F3AE625ACA5CB0029BD27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75D6D59225A8C7B800F4A84B /* Storyboards */,
+				75AD4C9E25AAAFC90038C5CB /* ViewControllers */,
+				75AD4C9D25AAAFB80038C5CB /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		75AD4C9D25AAAFB80038C5CB /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +160,8 @@
 				75D6D5A025A8C9AF00F4A84B /* Networking */,
 				75D6D58C25A8C75B00F4A84B /* Util */,
 				75D6D5C725A8CAAE00F4A84B /* Models */,
-				75D6D58E25A8C76E00F4A84B /* Screens */,
+				751F3AE625ACA5CB0029BD27 /* Views */,
+				75D6D59125A8C79E00F4A84B /* ViewModels */,
 			);
 			path = BookStore_Rodrigo;
 			sourceTree = "<group>";
@@ -173,31 +184,12 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		75D6D58E25A8C76E00F4A84B /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				75D6D59025A8C79500F4A84B /* Views */,
-				75D6D59125A8C79E00F4A84B /* ViewModels */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
 		75D6D58F25A8C77F00F4A84B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				75D6D57E25A8C63400F4A84B /* Assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		75D6D59025A8C79500F4A84B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				75D6D59225A8C7B800F4A84B /* Storyboards */,
-				75AD4C9E25AAAFC90038C5CB /* ViewControllers */,
-				75AD4C9D25AAAFB80038C5CB /* CollectionViewCells */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		75D6D59125A8C79E00F4A84B /* ViewModels */ = {
